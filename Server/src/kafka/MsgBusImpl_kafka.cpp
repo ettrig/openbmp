@@ -1101,7 +1101,7 @@ bool msgBus_kafka::resolveIp(string name, string &hostname) {
             !getnameinfo(ai->ai_addr,ai->ai_addrlen, host, sizeof(host), NULL, 0, NI_NAMEREQD)) {
 
         hostname.assign(host);
-        LOG_INFO("resovle: %s to %s", name.c_str(), hostname.c_str());
+        LOG_INFO("resolve: %s to %s", name.c_str(), hostname.c_str());
 
         freeaddrinfo(ai);
         return false;
